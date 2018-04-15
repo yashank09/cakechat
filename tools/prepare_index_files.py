@@ -13,7 +13,7 @@ from cakechat.utils.text_processing import get_tokens_sequence, get_processed_co
 from cakechat.config import BASE_CORPUS_NAME, TRAIN_CORPUS_NAME, DEFAULT_CONDITION
 
 MAX_TOKENS_NUM = 50000
-MAX_CONDITIONS_NUM = 5
+MAX_CONDITIONS_NUM = 2
 TEXT_FIELD_NAME = 'text'
 CONDITION_FIELD_NAME = 'condition'
 

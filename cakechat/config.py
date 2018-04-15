@@ -45,8 +45,8 @@ MIN_WORD_FREQ = 1  # Minimum frequency of a word to be used in word2vec pre-calc
 
 # condition inputs. We use five major emotions to condition our model's predictions
 EMOTIONS_TYPES = create_namedtuple_instance(
-    'EMOTIONS_TYPES', neutral='neutral', anger='anger', joy='joy', fear='fear', sadness='sadness')
-DEFAULT_CONDITION = EMOTIONS_TYPES.neutral  # Default condition to be used during the prediction (if not specified)
+    'EMOTIONS_TYPES', therapist='thera', client='client')
+DEFAULT_CONDITION = EMOTIONS_TYPES.therapist  # Default condition to be used during the prediction (if not specified)
 CONDITION_EMBEDDING_DIMENSION = 128  # Conditions embedding layer dimension to be trained.
 
 # NN architecture params
@@ -66,7 +66,7 @@ GRAD_CLIP = 5.0  # Gradient clipping passed into theano.gradient.grad_clip()
 ADADELTA_LEARNING_RATE = 1.0  # Initial AdaDelta learning rate
 
 # predictions params
-MAX_PREDICTIONS_LENGTH = 40  # Max. number of tokens which can be generated on the prediction step
+MAX_PREDICTIONS_LENGTH = 50  # Max. number of tokens which can be generated on the prediction step
 PREDICTION_MODES = create_namedtuple_instance(
     'PREDICTION_MODES',
     beamsearch='beamsearch',
